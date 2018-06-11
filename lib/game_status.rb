@@ -42,6 +42,8 @@ def over?(board)
 end
 
 def winner(board)
-  winning_array = won?(board).first
-  board[winning_array]
+  if won?(board).kind_of?(Array)
+    winning_array = won?(board).first
+    board[winning_array]
+  end
 end
