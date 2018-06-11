@@ -42,5 +42,7 @@ def over?(board)
 end
 
 def winner?(board)
-  won?(board).detect{|winner| board[winner]}
+  won?(board).select do |winner|
+    board[winner]
+  end
 end
