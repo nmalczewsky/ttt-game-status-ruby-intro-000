@@ -20,15 +20,15 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if empty?(board)
-    return false
-  elsif draw?(board)
-    return false
-  else
+  #if empty?(board)
+  #  return false
+  #elsif draw?(board)
+  #  return false
+  #else
     WIN_COMBINATIONS.detect do |win_combination|
       win_combination.all?{|win_index| board[win_index] == "X"} || win_combination.all?{|win_index| board[win_index] == "O"}
     end
-  end
+  #end
 
 end
 
