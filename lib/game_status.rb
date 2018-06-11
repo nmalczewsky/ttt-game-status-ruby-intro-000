@@ -42,7 +42,6 @@ def over?(board)
 end
 
 def winner?(board)
-  won?(board).select do |winner|
-    board[winner]
-  end
+  winning_array = won?(board).first
+  board[winning_array]
 end
